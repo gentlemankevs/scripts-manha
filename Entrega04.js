@@ -28,10 +28,29 @@ var manadaVirgulaPrototipo = {mostrarBarulheira: function(animais){
 		}
 	}
 }}
+
+function manadaAsterisco(animais){
+	var barulheira = '';
+}
+var manadaAsteriscoPrototipo = {mostrarBarulheira: function(animais){
+		for (i = 0; i<=animais.lenght; i++){
+		if (i===animais.lenght){
+		barulheira+=bicho.fazerBarulho;
+		}
+		else{
+		barulheira+=bicho.fazerBarulho+'*';
+		}
+	}
+}}
+
 Animal.prototype = animalPrototipo;
 Manada.prototype = manadaPrototipo;
-manadaVirgula.prototype = manadaVirgulaPrototipo;
 manadaVirgulaPrototipo.prototype = manadaPrototipo;
+manadaVirgula.prototype = manadaVirgulaPrototipo;
+manadaAsteriscoPrototipo.prototype = manadaPrototipo;
+manadaAsterisco.prototype = manadaAsteriscoPrototipo;
+
+
 
 
 var Cachorro = new Animal('Au au');
